@@ -6,9 +6,16 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      tricks: [{"stance":"regular","name":"treflip","obstacle":"flat ground","tutorial":"https://www.youtube.com/watch?v=XGw3YkQmNig","id":1},{"stance":"switch","name":"heelflip","obstacle":"stairs","tutorial":"https://www.youtube.com/watch?v=9N9swrZU1HA","id":2},{"stance":"regular","name":"frontside 50-50, backside 180 out","obstacle":"ledge","tutorial":"https://www.youtube.com/watch?v=9N9swrZU1HA","id":3}]
+      tricks: []
     }
   }
+
+  componentDidMount = () => {
+    fetch('http://localhost:3001/api/v1/tricks')
+      .then(response => response.json())
+      .then(data => this.setState({ tricks: data}))
+  }
+
   render() {
     return (
       <div className="App">
