@@ -1,0 +1,7 @@
+.tile {
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: aliceblue;
+    font-size: 80%;
+    border-radius: 10px;
+}
