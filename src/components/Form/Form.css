@@ -1,0 +1,20 @@
+form {
+    display: flex;
+    justify-content: space-around;
+    margin: 5%;
+    height: 4vh;
+    font-weight: bolder;
+}
+
+input[type=text] {
+    border: none;
+    width: 10vw;
+    border-radius: 5px;
+}
+
+button {
+    background-color: aliceblue;
+    border:none;
+}
+
+
